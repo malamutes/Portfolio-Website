@@ -1,0 +1,44 @@
+.SideNavContainer {
+    /* side nav width is 10 % since the main 
+    page rendered is going to be taking 90% width */
+    position: fixed;
+    top: 0;
+    width: 10%;
+    height: 100vh;
+    background-color: blue;
+    z-index: 10000;
+
+    /* centering the anchors */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* along vertical axis */
+    align-items: center;
+    /* along horizontal axis */
+
+}
+
+@media (min-width: 1920px) {
+    .SideNavContainer {
+        width: 192px;
+    }
+}
+
+.AnchorLinksDiv {
+    margin: 25% auto;
+    word-break: break-all;
+}
+
+.AnchorLinksDiv a {
+    text-decoration: none;
+    transition: transform 1s;
+    display: inline-block;
+    /* this lets it work now */
+}
+
+.AnchorLinksDiv a:hover {
+    transform: scale(1.5);
+    transition-duration: 1s;
+    cursor: pointer;
+}

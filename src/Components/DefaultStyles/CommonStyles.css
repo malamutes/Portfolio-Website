@@ -1,0 +1,25 @@
+.DefaultMainContainer {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    left: 10%;
+}
+
+@media (max-width: 390px) {
+    .DefaultMainContainer {
+        height: 300%;
+    }
+}
+
+
+@media (min-width: 390px) and (max-width: 1024px) {
+    .DefaultMainContainer {
+        height: 200%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1920px) {
+    .DefaultMainContainer {
+        height: 100%;
+    }
+}
