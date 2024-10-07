@@ -1,0 +1,17 @@
+.ProgLangCardContainer {
+    position: absolute;
+    width: 200px;
+    aspect-ratio: 4;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+
+}
+
+.ProgLangCardContainer img {
+    position: relative;
+    /* the aspect ratio is such taht the width > height always so adjust mainly with max height not width
+    also need to make image transparent*/
+    max-height: 100%;
+    padding-right: 5%;
+}

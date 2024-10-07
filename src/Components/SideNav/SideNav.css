@@ -6,7 +6,7 @@
     width: 10%;
     height: 100vh;
     background-color: blue;
-    z-index: 10000;
+    z-index: 1000;
 
     /* centering the anchors */
 
@@ -18,6 +18,8 @@
     /* along horizontal axis */
 
 }
+
+/* if the screen is too large just set sidebar to be fixed */
 
 @media (min-width: 1920px) {
     .SideNavContainer {
