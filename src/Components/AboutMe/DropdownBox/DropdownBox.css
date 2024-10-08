@@ -3,3 +3,9 @@
     aspect-ratio: 4;
 
 }
+
+.LanguageImageIcon {
+    position: relative;
+    max-Height: 50px;
+    width: auto
+}

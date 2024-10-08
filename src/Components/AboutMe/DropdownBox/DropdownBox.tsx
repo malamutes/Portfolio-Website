@@ -1,25 +1,32 @@
 import './DropdownBox.css'
 import React from 'react';
-import { Skills } from '../../../Data/SkillsData';
+import { examples, Skills } from '../../../Data/SkillsData';
 
 interface DropdownBoxProps {
+    example: examples
     name: string
 }
 
 export default function DropdownBox(props: DropdownBoxProps) {
     //need to come back and check the width of this 
 
+
     return (
         <div style={{ position: 'relative', width: '250px' }}>
             <button className="btn btn-primary DropdownBox" data-bs-toggle="collapse"
                 data-bs-target={`#${props.name}`}
                 aria-expanded="false" aria-controls={props.name}>
-                HELLO
+                {props.name}
             </button>
-            <div style={{ backgroundColor: 'black', wordBreak: 'break-all' }}
+            <div style={{ backgroundColor: 'orange' }}
                 className="collapse" id={props.name}>
-                aaaaaaaaaa  aaaaaaaaaaaaaaaaaaaa
-                a
+                <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> {/* can do arraws or bullet points here*/}
+                    {Object.values(props.example).map((item, index) =>
+                    (<li key={Object.keys(props.example)[index]}>
+                        <img className="LanguageImageIcon" src={item} alt="LanguageIcon"></img>
+                    </li>
+                    ))}
+                </ul>
             </div>
         </div>);
 }

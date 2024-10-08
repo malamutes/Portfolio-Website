@@ -1,21 +1,21 @@
-type examples = { [key: string]: string };
+export interface examples {
+    [key: string]: string
+};
 
-interface skills {
-    ProgrammingLanguages: examples;
-    ArtSoftware: examples;
-    ProductivityTools: examples;
+export interface skills {
+    [key: string]: examples
 };
 
 
 const Skills: skills = {
     ProgrammingLanguages: {
         Python: "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
-        Java: "https://brandslogos.com/wp-content/uploads/images/large/java-logo-1.png",
+        Java: "https://logos-world.net/wp-content/uploads/2022/07/Java-Symbol.png",
         React: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
-        CSS: "https://brandslogos.com/wp-content/uploads/images/large/css-logo.png",
+        CSS: "https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png",
         Typescript: "https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png",
         C: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
-        Kotlin: "https://brandslogos.com/wp-content/uploads/images/large/kotlin-logo-1.png",
+        Kotlin: "https://developer.android.com/static/codelabs/basic-android-kotlin-compose-first-program/img/840cee8b164c10b.png",
     },
 
     ArtSoftware: {

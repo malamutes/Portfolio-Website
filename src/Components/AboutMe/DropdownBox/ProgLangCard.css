@@ -1,11 +1,11 @@
 .ProgLangCardContainer {
     position: absolute;
-    width: 200px;
+    width: 90%;
     aspect-ratio: 4;
     background-color: orange;
     display: flex;
     align-items: center;
-
+    overflow: hidden;
 }
 
 .ProgLangCardContainer img {
