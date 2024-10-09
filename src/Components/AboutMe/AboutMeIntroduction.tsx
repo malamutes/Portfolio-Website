@@ -3,6 +3,7 @@ import './AboutMeIntroduction.css'
 import DropdownBox from './DropdownBox/DropdownBox'
 import ProgLangCard from './DropdownBox/ProgLangCard'
 import { Skills } from '../../Data/SkillsData'
+import { ContactLinks } from '../../Data/ContactLinks'
 
 const Introduction = `
 Hiya!
@@ -15,6 +16,7 @@ where I can express my creativity.
 
 export default function AboutMeIntroduction() {
     const skillsData = Skills;
+    const contactLinksData = ContactLinks;
     const colorDebug = ['red', 'yellow', 'green'];
 
     return (
@@ -26,32 +28,31 @@ export default function AboutMeIntroduction() {
                     (<div key={skillset} className="col DropdownBoxContainer" style={{ backgroundColor: colorDebug[index] }}>
                         <DropdownBox name={skillset} example={skillsData[skillset]} />
                     </div>
-
                     ))}
-
-
                 </div>
             </div>
 
             <div className="BackgroundContainer">
-                HLLO WORLD
+                <span style={{ textDecorationLine: 'underline' }}>Address</span>
+                <p>Marmion Street, Booragoon, 6154, WA, Australia</p>
+                Phone Number <br />
+                <p>(+61) 452 389 408</p>
+
+                Email
+                <ul style={{ fontSize: '0.75cqw', listStyleType: 'none', padding: '0' }}>
+                    <li>
+                        {contactLinksData.CurtinEmail}
+                    </li>
+                    <li>
+                        {contactLinksData.Gmail}
+                    </li>
+                </ul>
+                <a href={contactLinksData.Artstation} target="_blank">Artstation</a> <br />
+                <a href={contactLinksData.Github} target="_blank">Github</a> <br />
+                <a href={contactLinksData.Linkedln} target="_blank">LinkedIn</a> <br />
+                <a href="public\PaulVan_CV.pdf" target="_blank">Resume</a>
+
             </div>
         </div>
     )
 }
-
-
-/* 
-                 <div style={{ backgroundColor: "red", }} className="col DropdownBoxContainer">
-                        <DropdownBox name='1' />
-                    </div>
-
-                    <div style={{ backgroundColor: "yellow" }} className="col DropdownBoxContainer">
-                        <DropdownBox name='2' />
-                    </div>
-
-                    <div style={{ backgroundColor: "green" }} className="col DropdownBoxContainer">
-                        <DropdownBox name='3' />
-                    </div>
-
-                    */

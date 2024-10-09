@@ -1,3 +1,11 @@
 .ContactInfoContainer {
-    background-color: aqua;
+    background-color: red;
+    height: 25%;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .ContactInfoContainer {
+        display: block;
+    }
 }

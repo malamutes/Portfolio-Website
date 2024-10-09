@@ -22,3 +22,7 @@
     width: 1920px;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

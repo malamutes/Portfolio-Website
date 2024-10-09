@@ -1,3 +1,57 @@
 .EducationContainer {
     background-color: yellow;
+    display: flex;
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    .EducationContainer {
+        flex-direction: column;
+    }
+}
+
+
+.CurtinContainer {
+    position: relative;
+    background-color: purple;
+    width: 50%;
+    height: 10%;
+    transform-origin: center top;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.AXHSContainer {
+    position: relative;
+    width: 50%;
+    background-color: black;
+    transform-origin: center bottom;
+    transition-property: transform;
+    transition-duration: 2s;
+    height: 10%;
+    margin-top: auto;
+
+
+
+}
+
+
+.Expanded {
+    transform: scaleY(10);
+}
+
+@media (max-width: 1024px) {
+    .Expanded {
+        transform: scaleY(5);
+    }
+}
+
+@media (max-width: 1024px) {
+    .AXHSContainer {
+        width: 100%;
+    }
+
+    .CurtinContainer {
+        width: 100%;
+    }
 }

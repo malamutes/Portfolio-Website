@@ -9,13 +9,13 @@ export interface skills {
 
 const Skills: skills = {
     ProgrammingLanguages: {
-        Python: "https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png",
-        Java: "https://logos-world.net/wp-content/uploads/2022/07/Java-Symbol.png",
+        Python: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Python_logo_01.svg/2048px-Python_logo_01.svg.png",
+        Java: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png",
         React: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
-        CSS: "https://cdn.freebiesupply.com/logos/large/2x/css3-logo-png-transparent.png",
+        CSS: "https://img.icons8.com/color/512/css3.png",
         Typescript: "https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png",
         C: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
-        Kotlin: "https://developer.android.com/static/codelabs/basic-android-kotlin-compose-first-program/img/840cee8b164c10b.png",
+        Kotlin: "https://user-images.githubusercontent.com/103866722/177941491-1947c6b0-6e38-4880-8bd7-01dac36165df.png",
     },
 
     ArtSoftware: {

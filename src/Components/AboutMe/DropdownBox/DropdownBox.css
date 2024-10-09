@@ -4,8 +4,30 @@
 
 }
 
+.IconNameCard {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.IconNameCard:hover .DisplayText {
+    visibility: visible;
+    transform: translateX(50px) scale(2.5);
+}
+
 .LanguageImageIcon {
     position: relative;
-    max-Height: 50px;
-    width: auto
+    max-Height: 40px;
+    width: auto;
+    margin: 10% auto;
+
+}
+
+.LanguageImageIcon:hover {}
+
+.DisplayText {
+    visibility: hidden;
+    font-size: 0.5rem;
+    transition-property: transform;
+    transition-duration: 2s;
 }

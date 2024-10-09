@@ -6,16 +6,8 @@
     width: 10%;
     height: 100vh;
     background-color: blue;
-    z-index: 1000;
-
-    /* centering the anchors */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* along vertical axis */
-    align-items: center;
-    /* along horizontal axis */
+    z-index: 999;
+    overflow: hidden;
 
 }
 
@@ -27,10 +19,57 @@
     }
 }
 
-.AnchorLinksDiv {
-    margin: 25% auto;
-    word-break: break-all;
+@media (max-width: 768px) {
+    .SideNavContainer {
+        transition-property: transform;
+        transition-duration: 2s;
+        width: 105px;
+        max-height: 40%;
+        height: fit-content;
+    }
+
 }
+
+.ToggleViewBox {
+    position: fixed;
+    width: 5%;
+    aspect-ratio: 1;
+    background-color: red;
+    top: 5%;
+    display: none;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .ToggleViewBox {
+        display: block;
+    }
+}
+
+.AnchorLinksDiv {
+    margin: 40% auto;
+
+}
+
+@media (max-width: 768px) {
+    .AnchorLinksDiv {
+        margin: 10% auto;
+    }
+}
+
+.MyUnorderedList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .MyUnorderedList {
+        padding-top: 40%;
+    }
+}
+
 
 .AnchorLinksDiv a {
     text-decoration: none;
@@ -43,4 +82,27 @@
     transform: scale(1.5);
     transition-duration: 1s;
     cursor: pointer;
+}
+
+@media (min-width: 1920px) {
+    .AnchorLinksDiv a {
+        font-size: 1.1cqw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .AnchorLinksDiv a {
+        font-size: 1.35cqw;
+    }
+}
+
+.DynamicContactInfo {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .DynamicContactInfo {
+        display: block;
+    }
+
 }

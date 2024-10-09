@@ -19,11 +19,14 @@ export default function DropdownBox(props: DropdownBoxProps) {
                 {props.name}
             </button>
             <div style={{ backgroundColor: 'orange' }}
-                className="collapse" id={props.name}>
-                <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}> {/* can do arraws or bullet points here*/}
+                className="collapse " id={props.name}>
+                <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', }}> {/* can do arraws or bullet points here*/}
                     {Object.values(props.example).map((item, index) =>
                     (<li key={Object.keys(props.example)[index]}>
-                        <img className="LanguageImageIcon" src={item} alt="LanguageIcon"></img>
+                        <div className="IconNameCard">
+                            <img className="LanguageImageIcon" src={item} alt="LanguageIcon" />
+                            <span className="DisplayText">{Object.keys(props.example)[index]}</span>
+                        </div>
                     </li>
                     ))}
                 </ul>

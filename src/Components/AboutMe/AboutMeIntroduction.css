@@ -14,12 +14,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: calc(225px + 5vw)
+    top: calc(250px + 5vw)
 }
 
 .IntroductionContainer h3 {
     text-align: center;
     width: 55%;
+    font-size: 1.75cqw;
+}
+
+@media (max-width: 768px) {
+    .IntroductionContainer h3 {
+        font-size: 3.5cqw;
+        width: 85%;
+    }
 }
 
 .DropdownContainer {
@@ -38,5 +46,15 @@
     position: relative;
     background-color: green;
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 20%
+}
 
+@media (max-width: 768px) {
+    .BackgroundContainer {
+        display: none;
+    }
 }
