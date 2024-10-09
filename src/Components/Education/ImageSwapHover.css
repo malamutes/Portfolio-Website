@@ -1,0 +1,42 @@
+.ImageSwapHoverContainer {
+    position: absolute;
+    /* not defining width and height here lets className from other file takes precedence
+    because this part is more specific than className from another file */
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+}
+
+.ImageOne {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.ImageOneAXHS {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+
+.ImageTwo {
+    position: absolute;
+    width: 56%;
+    aspect-ratio: 0.65;
+    top: 5%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.ImageSwapHoverContainer:hover .ImageOne {
+    opacity: 0;
+}
+
+.ImageSwapHoverContainer:hover .ImageTwo {
+    opacity: 1;
+}

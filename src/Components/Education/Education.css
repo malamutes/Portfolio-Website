@@ -10,34 +10,59 @@
     }
 }
 
-
-.CurtinContainer {
+.SchoolCommonStyles {
     position: relative;
-    background-color: purple;
-    width: 50%;
-    height: 10%;
-    transform-origin: center top;
     transition-property: transform;
     transition-duration: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 50%;
+    height: 10%;
+    opacity: 1;
+    transform-origin: center top;
+}
+
+.CurtinContainer {
+    background-color: purple;
 }
 
 .AXHSContainer {
-    position: relative;
-    width: 50%;
-    background-color: black;
+    background-color: green;
     transform-origin: center bottom;
-    transition-property: transform;
-    transition-duration: 2s;
-    height: 10%;
     margin-top: auto;
-
-
-
 }
 
-
 .Expanded {
+    opacity: 1;
     transform: scaleY(10);
+}
+
+.ImageSwapHoverStyleCurtin {
+    position: absolute;
+    opacity: 0;
+    transform: scaleY(0.1);
+    transition: opacity 0.5s ease;
+}
+
+.ImageSwapHoverStyleAXHS {
+    position: absolute;
+    opacity: 0;
+    transform: scaleY(0.1);
+    transition: opacity 0.5s ease;
+}
+
+.Expanded>.ImageSwapHoverStyleCurtin {
+    opacity: 0.25 !important;
+}
+
+.Expanded>.ImageSwapHoverStyleAXHS {
+    opacity: 0.25 !important;
+}
+
+.Expanded>.EducationDescription {
+    opacity: 1 !important;
 }
 
 @media (max-width: 1024px) {
@@ -54,4 +79,26 @@
     .CurtinContainer {
         width: 100%;
     }
+}
+
+@media (max-width: 1024px) {
+    .CurtinEducationImages {
+        width: 80%;
+        aspect-ratio: 5;
+    }
+
+    .AXHSEducationImages {
+        width: 60%;
+        aspect-ratio: 5;
+    }
+}
+
+.EducationDescription {
+    transform: scaleY(0.1);
+    opacity: 0;
+    font-size: 1rem;
+    max-width: 525px;
+    font-weight: 900;
+    text-align: center;
+    word-break: normal;
 }
