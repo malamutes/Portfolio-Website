@@ -6,36 +6,15 @@ import CurtinEducationDescription from './EducationDescription';
 import { AXHSEducationDescription } from './EducationDescription';
 import ImageSwapHoverCurtin from './ImageSwapHover';
 import { ImageSwapHoverAXHS } from './ImageSwapHover';
+import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition';
 
 
 export default function Education() {
-    const [isScrollPast, setIsScrollPast] = useState(false);
     const curtinContainerRef = useRef<HTMLDivElement>(null);
     const educationImages = EducationImages;
 
-    useEffect(() => {
-        const toggleSetIsScrollPast = () => {
-            if (curtinContainerRef.current != null) {
-                const threshold = window.innerWidth * 9 / 10;
-                const curtinContainerRect = curtinContainerRef.current.getBoundingClientRect();
-                if (threshold - curtinContainerRect.bottom >= 0) {
-                    console.log("ADASIDIOj");
-                    setIsScrollPast(true);
-                }
-            }
 
-        }
-
-        if (isScrollPast === false) {
-            window.addEventListener('scroll', toggleSetIsScrollPast);
-        }
-
-
-        return () => {
-            window.removeEventListener('scroll', toggleSetIsScrollPast);
-        }
-
-    }, [/* empty array so it only runs once per initial render*/])
+    const scrollPast = checkScrollPosition((9 / 10), curtinContainerRef)
 
 
     const ImageHoverStyleCurtin = "ImageSwapHoverStyleCurtin";
@@ -43,14 +22,14 @@ export default function Education() {
 
     return (
         <div id="EducationID" className="DefaultMainContainer EducationContainer">
-            <div className={`SchoolCommonStyles CurtinContainer ${isScrollPast ? "Expanded" : ""}`} id="CurtinContainer" ref={curtinContainerRef}>
+            <div className={`SchoolCommonStyles CurtinContainer ${scrollPast ? "Expanded" : ""}`} id="CurtinContainer" ref={curtinContainerRef}>
                 <ImageSwapHoverCurtin width="1000px" aspectRatio="1" img1={educationImages[2]}
                     img2={educationImages[3]} className={ImageHoverStyleCurtin} />
 
                 <CurtinEducationDescription />
             </div>
 
-            <div className={`SchoolCommonStyles AXHSContainer ${isScrollPast ? "Expanded" : ""}`}>
+            <div className={`SchoolCommonStyles AXHSContainer ${scrollPast ? "Expanded" : ""}`}>
                 <ImageSwapHoverAXHS width="1000px" aspectRatio="1" img1={educationImages[0]}
                     img2={educationImages[1]} className={ImageHoverStyleAXHS} />
                 <AXHSEducationDescription />

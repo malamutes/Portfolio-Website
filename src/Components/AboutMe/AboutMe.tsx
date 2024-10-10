@@ -1,5 +1,5 @@
 import './AboutMe.css'
-import '../DefaultStyles/CommonStyles.css'
+import '../CommonLogicStyles/CommonStyles.css'
 import AboutMeIntroduction from './AboutMeIntroduction'
 
 export default function AboutMe() {

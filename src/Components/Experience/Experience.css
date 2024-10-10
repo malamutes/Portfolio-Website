@@ -1,3 +1,49 @@
 .ExperienceContainer {
     background-color: red;
+    overflow: hidden;
+}
+
+.ExperienceCardContainer {
+    position: absolute;
+    background-color: chartreuse;
+    width: 100%;
+    height: calc((100% / 3) - 0.01px);
+    z-index: 10000;
+    opacity: 1;
+    transition-property: transform opacity;
+    transition-duration: 2s;
+}
+
+.MiddleCard {
+    background-color: coral;
+    top: calc((100% / 3) - 0.01px);
+    left: 100%;
+}
+
+.TopCard {
+    background-color: green;
+    top: 0%;
+    right: 100%;
+}
+
+.BottomCard {
+    background-color: yellow;
+    top: calc((200% / 3) - 0.01px);
+    right: 100%;
+
+}
+
+.MiddleCardSlide {
+    opacity: 1;
+    transform: translateX(-100%);
+}
+
+.TopCardSlide {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+.BottomCardSlide {
+    opacity: 1;
+    transform: translateX(100%);
 }
