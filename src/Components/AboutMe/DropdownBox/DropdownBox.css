@@ -1,5 +1,6 @@
 .DropdownBox {
     width: 250px;
+    max-width: 100%;
     aspect-ratio: 4;
 
 }
@@ -20,10 +21,7 @@
     max-Height: 40px;
     width: auto;
     margin: 10% auto;
-
 }
-
-.LanguageImageIcon:hover {}
 
 .DisplayText {
     visibility: hidden;

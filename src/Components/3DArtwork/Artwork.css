@@ -1,3 +1,79 @@
 .ArtworkContainer {
     background-color: purple;
+    overflow: hidden;
+
+}
+
+.ImageContainer {
+    background-color: darkgreen;
+    position: absolute;
+    width: calc((100% / 3) * 1.75 - 0.01px);
+    left: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+}
+
+.IconContainer {
+    background-color: darkolivegreen;
+    position: absolute;
+    width: calc((100% / 3) * 1.25 - 0.01px);
+    left: 0;
+    height: 40%;
+    top: 100%;
+
+}
+
+.NameContainer {
+    background-color: cadetblue;
+    position: absolute;
+    width: calc((100% / 3) * 1.25 - 0.01px);
+    left: 0;
+    bottom: 100%;
+    height: 60%;
+}
+
+.CommonTransformations {
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+#ArtworkVideo {
+    height: auto;
+    width: 80%;
+}
+
+@media (max-width: 1024px) {
+    .ImageContainer {
+        width: 100%;
+        left: 100%;
+        height: 60%;
+        bottom: 0;
+
+    }
+
+    .IconContainer {
+        height: 15%;
+        width: 100%;
+        top: 40%;
+    }
+
+    .NameContainer {
+        height: 25%;
+        width: 100%;
+        top: -25%;
+    }
+}
+
+.ImageContainerSlide {
+    transform: translateX(-100%);
+}
+
+.NameContainerSlide {
+    transform: translateY(100%);
+}
+
+.IconContainerSlide {
+    transform: translateY(-100%);
 }

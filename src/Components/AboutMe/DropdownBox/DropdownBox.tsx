@@ -12,15 +12,15 @@ export default function DropdownBox(props: DropdownBoxProps) {
 
 
     return (
-        <div style={{ position: 'relative', width: '250px' }}>
+        <div style={{ position: 'relative', overflow: 'hidden' }}>
             <button className="btn btn-primary DropdownBox" data-bs-toggle="collapse"
                 data-bs-target={`#${props.name}`}
                 aria-expanded="false" aria-controls={props.name}>
-                {props.name}
+                <span style={{ fontSize: '1cqw' }}>{props.name}</span>
             </button>
             <div style={{ backgroundColor: 'orange' }}
                 className="collapse " id={props.name}>
-                <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', }}> {/* can do arraws or bullet points here*/}
+                <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}> {/* can do arraws or bullet points here*/}
                     {Object.values(props.example).map((item, index) =>
                     (<li key={Object.keys(props.example)[index]}>
                         <div className="IconNameCard">

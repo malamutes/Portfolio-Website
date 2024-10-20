@@ -84,9 +84,11 @@
     cursor: pointer;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 2000px) {
     .AnchorLinksDiv a {
-        font-size: 1.1cqw;
+        font-size: 250%;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
     }
 }
 

@@ -17,30 +17,34 @@ export default function Education() {
     const scrollPast = checkScrollPosition((9 / 10), curtinContainerRef)
 
 
-    const ImageHoverStyleCurtin = "ImageSwapHoverStyleCurtin";
-    const ImageHoverStyleAXHS = "ImageSwapHoverStyleAXHS";
+    const ImageHoverStyle = "ImageSwapHoverStyle";
+
 
     return (
         <div id="EducationID" className="DefaultMainContainer EducationContainer">
             <div className={`SchoolCommonStyles CurtinContainer ${scrollPast ? "Expanded" : ""}`} id="CurtinContainer" ref={curtinContainerRef}>
-                <ImageSwapHoverCurtin width="1000px" aspectRatio="1" img1={educationImages[2]}
-                    img2={educationImages[3]} className={ImageHoverStyleCurtin} />
+                <ImageSwapHoverCurtin width="80%" aspectRatio="1" img1={educationImages[2]}
+                    img2={educationImages[3]} className={ImageHoverStyle} />
 
                 <CurtinEducationDescription />
+
             </div>
 
             <div className={`SchoolCommonStyles AXHSContainer ${scrollPast ? "Expanded" : ""}`}>
-                <ImageSwapHoverAXHS width="1000px" aspectRatio="1" img1={educationImages[0]}
-                    img2={educationImages[1]} className={ImageHoverStyleAXHS} />
+                <ImageSwapHoverAXHS width="80%" aspectRatio="1" img1={educationImages[0]}
+                    img2={educationImages[1]} className={ImageHoverStyle} />
+
                 <AXHSEducationDescription />
             </div>
+
         </div>
 
     )
 }
 
 
-/* 
+/*    
 
-    
-            */
+                        
+ */
+

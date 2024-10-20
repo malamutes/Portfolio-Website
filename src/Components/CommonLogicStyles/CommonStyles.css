@@ -1,8 +1,9 @@
 .DefaultMainContainer {
     position: relative;
-    height: 100%;
+    aspect-ratio: 1.8;
     width: 90%;
     left: 10%;
+
 }
 
 

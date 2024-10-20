@@ -4,53 +4,65 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
-    display: flex;
 }
 
 .IntroductionContainer {
-    position: relative;
+    position: absolute;
     background-color: aqua;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: calc(250px + 5vw)
-}
-
-.IntroductionContainer h3 {
-    text-align: center;
-    width: 55%;
-    font-size: 1.75cqw;
-}
-
-@media (max-width: 768px) {
-    .IntroductionContainer h3 {
-        font-size: 3.5cqw;
-        width: 85%;
-    }
-}
-
-.DropdownContainer {
-    position: relative;
-    top: 2.5%;
-    background-color: brown;
-    width: 100%;
-}
-
-.DropdownBoxContainer {
-    display: flex;
-    justify-content: center;
+    bottom: 0;
+    height: 100%;
+    width: 80%;
 }
 
 .BackgroundContainer {
-    position: relative;
-    background-color: green;
-    width: 30%;
+    position: absolute;
+    background-color: black;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     text-align: center;
-    top: 20%
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+}
+
+.IntroductionContainer h3 {
+    position: relative;
+    width: 55%;
+    font-size: 1.5cqw;
+    left: 5%;
+    top: 5%;
+}
+
+.PhotoContainer {
+    position: absolute;
+    background-color: bisque;
+    width: 30%;
+    aspect-ratio: 1;
+    right: 5%;
+    top: 5%;
+}
+
+.SkillsCardContainer {
+    position: absolute;
+    width: 10px;
+    aspect-ratio: auto;
+}
+
+@media (min-width: 2000px) {
+    .IntroductionContainer h3 {
+        font-size: 175%;
+        width: 85%;
+    }
+
+    .AboutMeIntroductionContainer {
+        height: 90%;
+    }
+
+    .BackgroundContainer {
+        width: 5%;
+    }
 }
 
 @media (max-width: 768px) {

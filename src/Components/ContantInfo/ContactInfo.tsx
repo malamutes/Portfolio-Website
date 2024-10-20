@@ -16,7 +16,7 @@ export default function ContaintInfo() {
 
                 <div className="col">
                     Email
-                    <ul style={{ fontSize: '2.5cqw', listStyleType: 'none', padding: '0' }}>
+                    <ul style={{ fontSize: '1cqw', listStyleType: 'none', padding: '0' }}>
                         <li>
                             {contactLinksData.CurtinEmail}
                         </li>
@@ -27,7 +27,13 @@ export default function ContaintInfo() {
                 </div>
 
             </div>
-            <div className="row">
+
+
+        </div>
+    </div>)
+}
+
+/*             <div className="row">
                 <div className="col">
                     <a href={contactLinksData.Artstation} target="_blank">Artstation</a> <br />
                 </div>
@@ -46,7 +52,4 @@ export default function ContaintInfo() {
                 </div>
 
             </div>
-
-        </div>
-    </div>)
-}
+            */

@@ -1,0 +1,22 @@
+.DummyContainer {}
+
+.DummyContainer:hover .DisplayText {
+    visibility: visible;
+    transform: translateX(100%) scale(2.25);
+}
+
+.LanguageImageIcon {
+    position: relative;
+    max-Height: 40px;
+    width: auto;
+    margin: 10% auto;
+    height: 2.25cqw;
+
+}
+
+.DisplayText {
+    visibility: hidden;
+    font-size: 0.5rem;
+    transition-property: transform;
+    transition-duration: 2s;
+}

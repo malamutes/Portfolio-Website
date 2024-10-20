@@ -9,25 +9,18 @@
 
 .ImageOne {
     position: absolute;
-    width: 100%;
+    top: 25%;
+    width: 75%;
     height: auto;
     opacity: 1;
     transition: opacity 0.5s ease;
 }
-
-.ImageOneAXHS {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
 
 .ImageTwo {
     position: absolute;
-    width: 56%;
-    aspect-ratio: 0.65;
+    width: 100%;
+    top: 0% !important;
+    aspect-ratio: 1;
     top: 5%;
     opacity: 0;
     transition: opacity 0.5s ease;
