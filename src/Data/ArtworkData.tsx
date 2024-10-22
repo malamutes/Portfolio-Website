@@ -14,4 +14,20 @@ const ArtworkVideosTitle: examples = {
     OC: "Original Character Design"
 }
 
-export { ArtworkVideos, ArtworkVideosTitle };
+const ArtworkVideosIcon: examples = {
+    Crownless: "/blendervideo/crownless/crownlessIcon.png",
+    Eve: "/blendervideo/eve/eveIcon.png",
+    KJS: "/blendervideo/KJS/kjsIcon.png",
+    OC: "/blendervideo/OC/ocIcon.png"
+}
+
+const ArtworkVideosIconHue: examples = {
+    Crownless: "hue-rotate(200deg)",
+    Eve: "hue-rotate(270deg)",
+    KJS: "hue-rotate(0deg)",
+    OC: "hue-rotate(90deg)"
+}
+
+
+
+export { ArtworkVideos, ArtworkVideosTitle, ArtworkVideosIcon, ArtworkVideosIconHue };

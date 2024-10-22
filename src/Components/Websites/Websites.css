@@ -1,5 +1,13 @@
 .WebsitesContainer {
     background-color: gold;
+    display: grid;
+    place-items: center;
+}
+
+.CarouselContainer {
+    position: absolute;
+    width: 80%;
+    height: auto;
 }
 
 .CarouselItem {

@@ -1,14 +1,19 @@
 import './Websites.css'
 
 export default function WebsiteCarousel() {
-    return (<div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+    const indicatorStyle: React.CSSProperties = {
+        width: '1cqw',
+        height: '1cqw',
+        borderRadius: '50%'
+    }
 
-    </div>
-
-    );
-}
-
-/*       <div className="carousel-inner">
+    return (<div id="carouselExampleControls" className="carousel slide CarouselContainer" data-bs-ride="carousel">
+        <div className='carousel-indicators '>
+            <a style={indicatorStyle} type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></a>
+            <a style={indicatorStyle} type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></a>
+            <a style={indicatorStyle} type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3" ></a>
+        </div>
+        <div className="carousel-inner">
             <div style={{ backgroundColor: 'red' }} className="carousel-item CarouselItem">
 
             </div>
@@ -21,10 +26,12 @@ export default function WebsiteCarousel() {
         </div>
         <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
         </a>
         <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
         </a>
-        */
+    </div>
+
+    );
+}
+
