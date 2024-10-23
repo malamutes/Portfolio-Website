@@ -1,7 +1,7 @@
-import './ContaintInfo.css'
+import './ContactInfo.css'
 import { ContactLinks } from '../../Data/ContactLinks'
 
-export default function ContaintInfo() {
+export default function ContactInfo() {
     const contactLinksData = ContactLinks;
 
     return (<div id="ContactInfoID" className="DefaultMainContainer ContactInfoContainer">

@@ -3,10 +3,10 @@
     page rendered is going to be taking 90% width */
     position: fixed;
     top: 0;
-    width: 10%;
+    width: 9%;
     height: 100vh;
     background-color: blue;
-    z-index: 999;
+
     overflow: hidden;
 
 }
@@ -14,9 +14,7 @@
 /* if the screen is too large just set sidebar to be fixed */
 
 @media (min-width: 1920px) {
-    .SideNavContainer {
-        width: 192px;
-    }
+    .SideNavContainer {}
 }
 
 @media (max-width: 768px) {

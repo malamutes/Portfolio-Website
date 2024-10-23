@@ -9,9 +9,10 @@ export default function Experience() {
 
     return (<div id="ExperienceID" className="DefaultMainContainer ExperienceContainer"
         ref={experienceCardRef}>
-        <ExperienceCard classname={`MiddleCard ${scrollPast ? "MiddleCardSlide" : ""}`} />
         <ExperienceCard classname={`TopCard ${scrollPast ? "TopCardSlide" : ""}`} />
+        <ExperienceCard classname={`MiddleCard ${scrollPast ? "MiddleCardSlide" : ""}`} />
         <ExperienceCard classname={`BottomCard ${scrollPast ? "BottomCardSlide" : ""}`} />
+
 
     </div>
     );

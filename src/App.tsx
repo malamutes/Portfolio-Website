@@ -6,7 +6,7 @@ import Education from './Components/Education/Education'
 import Experience from './Components/Experience/Experience'
 import Artwork from './Components/3DArtwork/Artwork'
 import Websites from './Components/Websites/Websites'
-import ContaintInfo from './Components/ContantInfo/ContactInfo'
+import ContactInfo from './Components/ContactInfo/ContactInfo'
 // dont forget to import css files and to render react components
 //with <> tag rather than calling it as {function}
 
@@ -21,7 +21,7 @@ function App() {
         <Experience />
         <Artwork />
         <Websites />
-        <ContaintInfo />
+        <ContactInfo />
       </div>
     </>
   )

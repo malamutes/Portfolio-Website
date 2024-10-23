@@ -5,19 +5,30 @@
 
 .ExperienceCardContainer {
     position: absolute;
+    display: flex;
+    align-items: center;
     background-color: chartreuse;
-    width: 100%;
     height: calc((100% / 3) - 0.01px);
-    z-index: 10000;
     opacity: 1;
+    width: 100%;
     transition-property: transform opacity;
     transition-duration: 2s;
+    display: flex;
+    justify-content: end;
 }
+
 
 .MiddleCard {
     background-color: coral;
     top: calc((100% / 3) - 0.01px);
     left: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: start;
+}
+
+.MiddleCardCover {
+    z-index: 2;
 }
 
 .TopCard {
