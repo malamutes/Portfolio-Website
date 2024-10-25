@@ -6,13 +6,19 @@
     width: 9%;
     height: 100vh;
     background-color: blue;
+    left: -27%;
     z-index: 100;
     /* z index is to make sure drop down box is actualyl displayed */
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    transition-property: transform;
+    transition-duration: 1.75s;
+}
 
+.SideNavContainerSlide {
+    transform: translateX(300%);
 }
 
 /* if the screen is too large just set sidebar to be fixed */

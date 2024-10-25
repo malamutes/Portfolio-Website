@@ -39,11 +39,19 @@ export default function SideNav() {
         }
     }, [above768px]);
 
+    const [mount, setMount] = useState(false);
+
+    //this is for initial render where im just using a hook to run after initial mount for auto anims on load
+    useEffect(() => {
+        setMount(true);
+
+    }, []);
+
     return (
         <>
             <button className="ToggleViewBox " data-bs-toggle="collapse"
                 data-bs-target="#SideNavContainer" aria-expanded="true" aria-controls="SideNavContainer"></button>
-            <div className={`SideNavContainer collapse ${isShow ? "show" : ""} `} id="SideNavContainer">
+            <div className={`SideNavContainer collapse ${isShow ? "show" : ""} ${mount ? 'SideNavContainerSlide' : ''}`} id="SideNavContainer">
                 <ul className="MyUnorderedList">
                     {anchors.map((anchor, index) => (
                         <li key={index} className="AnchorLinksDiv">

@@ -4,7 +4,8 @@ import DropdownBox from './DropdownBox/DropdownBox'
 import SkillsCard from './DropdownBox/SkillsCard'
 import { SkillsNew } from '../../Data/SkillsData'
 import { ContactLinks } from '../../Data/ContactLinks'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition'
 
 const Introduction = `
 Hiya!
@@ -42,21 +43,27 @@ export default function AboutMeIntroduction() {
         return () => { window.removeEventListener("resize", handleResize), console.log("HAHAR") };
     }, []);
 
+    const [mount, setMount] = useState(false);
 
+    //this is for initial render where im just using a hook to run after initial mount for auto anims on load
+    useEffect(() => {
+        setMount(true);
+
+    }, []);
 
     return (
         <div className="AboutMeIntroductionContainer">
             <div className="IntroductionContainer">
-                <h3>{Introduction}</h3>
-                <div className="PhotoContainer"></div>
+                <h3 className={`${mount ? "IntroductionSlide" : ""}`}>{Introduction}</h3>
+                <div className={`PhotoContainer ${mount ? "PhotoContainerSlide" : ""}`}></div>
                 <div style={{
                     position: "absolute", top: "47.5%", left: "5%", backgroundColor: "green",
                     width: "50%", height: "50%", display: "grid", placeItems: "center"
                 }}>
                     {Object.keys(skillsData).map((skillset, index) =>
-                    (<div key={skillset} className="SkillsCardContainer" style={{
-                        transform: `rotate(${index * 360 / 15}deg) translate(${Math.log(index * 2.5) * distance}${metric})`
-                    }}>
+                    (<div key={skillset} className={`SkillsCardContainer ${mount ? "StartUpRotation" : ""}`} style={{
+                        '--rotation': `${index * 360 / 15}deg`, '--translation': `${Math.log(index * 2.5) * distance}${metric}`
+                    } as React.CSSProperties}>
                         <SkillsCard iconUrl={skillsData[skillset]} name={skillset} />
                     </div>
                     ))}
@@ -64,7 +71,7 @@ export default function AboutMeIntroduction() {
 
             </div>
 
-            <div className="BackgroundContainer">
+            <div className={`BackgroundContainer ${mount ? "BackgroundContainerSlide" : ""}`}>
                 <span className='BackgroundFont'>Address
                     <p>Marmion Street, Booragoon, 6154, WA, Australia</p>
                     Phone Number <br />
@@ -89,5 +96,3 @@ export default function AboutMeIntroduction() {
         </div>
     )
 }
-
-/*       */

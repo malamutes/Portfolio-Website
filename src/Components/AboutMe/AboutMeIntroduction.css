@@ -22,9 +22,15 @@
     justify-content: center;
     text-align: center;
     bottom: 0;
-    right: 0;
+    right: -50%;
     width: 20%;
     height: 100%;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.BackgroundContainerSlide {
+    transform: translateX(-250%);
 }
 
 .IntroductionContainer h3 {
@@ -32,7 +38,13 @@
     width: 55%;
     font-size: 1.5cqw;
     left: 5%;
-    top: 10%;
+    top: -40%;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.IntroductionSlide {
+    transform: translateY(225%);
 }
 
 .PhotoContainer {
@@ -41,13 +53,25 @@
     width: 30%;
     aspect-ratio: 1;
     right: 5%;
-    top: 5%;
+    top: 100%;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.PhotoContainerSlide {
+    transform: translateY(-250%);
 }
 
 .SkillsCardContainer {
     position: absolute;
     width: 10px;
+    transition-property: transform;
+    transition-duration: 2s;
     aspect-ratio: auto;
+}
+
+.StartUpRotation {
+    transform: rotate(var(--rotation)) translate(var(--translation));
 }
 
 .BackgroundFont {
