@@ -6,9 +6,17 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
-
   overflow-x: hidden;
+
   /* overflow x is to prevent horizontal scrolling shouldnt even be a thing idk */
+}
+
+@media (max-width: 1024px) {
+
+  body,
+  #root {
+    overflow-x: auto;
+  }
 }
 
 .RootContainer {

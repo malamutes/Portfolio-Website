@@ -2,15 +2,93 @@
     background-color: gold;
     display: grid;
     place-items: center;
+
 }
 
 .CarouselContainer {
     position: absolute;
     width: 80%;
-    height: auto;
+    height: 100%;
 }
 
 .CarouselItem {
     width: 100%;
     aspect-ratio: 1.75;
+}
+
+.carousel-indicators.CommonTransformations {
+    top: 50cqw;
+    height: 15%;
+    transition-property: transform;
+    transition-duration: 2s;
+    display: flex;
+    place-items: center;
+}
+
+.carousel-indicators.CarouselIndicatorSlide {
+    transform: translateY(-125%);
+}
+
+.carousel-inner.CommonTransformations {
+    transition-property: transform;
+    transition-duration: 2s;
+    top: -87.5%;
+}
+
+.carousel-inner.CarouselInnerSlide {
+    transform: translateY(120%);
+}
+
+.carousel-control-prev.CommonTransformations {
+    transition-property: transform;
+    transition-duration: 2s;
+    left: -27.5%;
+}
+
+.carousel-control-prev.CarouselPrevSlide {
+    transform: translateX(175%);
+}
+
+.carousel-control-next.CommonTransformations {
+    transition-property: transform;
+    transition-duration: 2s;
+    right: -27.5%;
+}
+
+.carousel-control-next.CarouselNextSlide {
+    transform: translateX(-175%);
+}
+
+@media (max-width: 768px) {
+    .carousel-control-prev.CarouselPrevSlide {
+        width: 10%;
+        left: -12.5cqw;
+    }
+
+    .carousel-control-next.CarouselNextSlide {
+        width: 10%;
+        right: -12.5cqw;
+    }
+
+    .carousel-indicators.CarouselIndicatorSlide {
+        top: 110%;
+    }
+
+    .CarouselContainer {
+        width: 75%;
+    }
+
+    .carousel-inner.CommonTransformations {
+        top: -82.5%;
+    }
+
+    .carousel-indicators.CommonTransformations {
+        top: 50cqw;
+    }
+}
+
+@media (min-width: 2000px) {
+    .carousel-indicators.CommonTransformations {
+        top: 100%;
+    }
 }

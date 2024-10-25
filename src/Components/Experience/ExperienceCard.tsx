@@ -23,14 +23,10 @@ export default function ExperienceCard(props: ExperienceCardProps) {
                 backgroundColor: 'black'
             }}>
             </div>
-            <input style={{
-                position: 'absolute', transformOrigin: 'center',
-                width: '7.5cqw', transform: 'rotate(270deg)', margin: '-2.5cqw'
-
-            }}
-                type="range" className="form-range" min='3' max='100'
+            <input className="InputClass"
+                type="range" min='3' max='100'
                 value={value} onChange={handleChange} id="customRange1"></input>
-            <p style={{ fontSize: '1cqw' }}>
+            <p className='ExperienceFont'>
                 ASDHASUIDHSADUIHIUSAH
                 ASDHASUIDHSADUIHIUSAH
                 ASDHASUIDHSADUIHIUSAH

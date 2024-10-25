@@ -53,9 +53,16 @@
 .EducationDescription {
     transform: scaleY(0.1);
     opacity: 0;
-    font-size: 1cqw;
+    font-size: 1.25cqw;
     max-width: 80%;
     font-weight: 700;
     text-align: center;
     word-break: normal;
+}
+
+
+@media (min-width: 2000px) {
+    .EducationDescription {
+        font-size: 150%;
+    }
 }

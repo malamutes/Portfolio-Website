@@ -105,3 +105,19 @@
 .IconContainerSlide {
     transform: translateY(-100%);
 }
+
+.ArtworkTitle {
+    position: relative;
+    top: 50%;
+    font-size: 300%;
+    font-weight: 900;
+    width: 50%;
+    text-align: center;
+    height: fit-content;
+}
+
+@media (max-width: 2000px) {
+    .ArtworkTitle {
+        font-size: 3cqw;
+    }
+}

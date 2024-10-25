@@ -12,8 +12,6 @@ export default function Experience() {
         <ExperienceCard classname={`TopCard ${scrollPast ? "TopCardSlide" : ""}`} />
         <ExperienceCard classname={`MiddleCard ${scrollPast ? "MiddleCardSlide" : ""}`} />
         <ExperienceCard classname={`BottomCard ${scrollPast ? "BottomCardSlide" : ""}`} />
-
-
     </div>
     );
 }

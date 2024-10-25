@@ -32,7 +32,7 @@
     width: 55%;
     font-size: 1.5cqw;
     left: 5%;
-    top: 5%;
+    top: 10%;
 }
 
 .PhotoContainer {
@@ -50,18 +50,22 @@
     aspect-ratio: auto;
 }
 
+.BackgroundFont {
+    font-size: 1cqw;
+}
+
 @media (min-width: 2000px) {
     .IntroductionContainer h3 {
         font-size: 175%;
-        width: 85%;
+        width: 50%;
     }
 
     .AboutMeIntroductionContainer {
         height: 90%;
     }
 
-    .BackgroundContainer {
-        width: 5%;
+    .BackgroundFont {
+        font-size: 100%;
     }
 }
 

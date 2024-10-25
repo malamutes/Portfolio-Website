@@ -1,5 +1,5 @@
 import './SideNav.css'
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 
 export default function SideNav() {
@@ -14,11 +14,6 @@ export default function SideNav() {
     const [above768px, setAbove768px] = useState((window.innerWidth > 768) ? true : false);
     //for initial render
 
-
-
-    const toggleShow = () => {
-        setIsShow(isShow => !isShow);
-    }
 
     useEffect(() => {
         const handleResize = () => {
@@ -62,10 +57,7 @@ export default function SideNav() {
                             {contactInfo}
                         </a>
                     </li>
-
                 </ul>
-
-
             </div>
         </>
 

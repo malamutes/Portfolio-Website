@@ -58,3 +58,28 @@
     opacity: 1;
     transform: translateX(100%);
 }
+
+.ExperienceFont {
+    font-size: 125%;
+}
+
+.InputClass {
+    position: absolute;
+    transform-Origin: center;
+    width: 7.5%;
+    transform: rotate(270deg);
+    margin: -2.5%;
+    background-color: orange;
+}
+
+@media (max-width: 2000px) {
+    .ExperienceFont {
+        font-size: 1.5cqw;
+    }
+}
+
+@media (min-width: 2000px) {
+    .InputClass {
+        margin: -1.75%;
+    }
+}

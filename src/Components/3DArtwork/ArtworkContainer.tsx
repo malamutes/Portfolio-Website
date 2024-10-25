@@ -51,10 +51,7 @@ export default function ArtworkContainer() {
                 </div>
             </div>
             <div className={`NameContainer CommonTransformations ${scrollPast ? "NameContainerSlide" : ""}`}>
-                <span style={{
-                    position: 'relative', top: '60%', fontSize: "2cqw",
-                    fontWeight: '900', width: "50%", textAlign: 'center', height: 'fit-content'
-                }}>{title}</span>
+                <span className='ArtworkTitle'>{title}</span>
             </div>
         </div >
     );
