@@ -1,5 +1,4 @@
 .EducationContainer {
-    background-color: yellow;
     display: flex;
     position: relative;
 }
@@ -19,12 +18,10 @@
 }
 
 .CurtinContainer {
-    background-color: purple;
     left: 0;
 }
 
 .AXHSContainer {
-    background-color: green;
     transform-origin: center bottom;
     margin-top: auto;
     right: 0;
@@ -53,7 +50,7 @@
 .EducationDescription {
     transform: scaleY(0.1);
     opacity: 0;
-    font-size: 1.25cqw;
+    font-size: 1.1cqw;
     max-width: 80%;
     font-weight: 700;
     text-align: center;

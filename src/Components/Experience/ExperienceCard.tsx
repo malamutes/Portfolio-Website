@@ -1,8 +1,11 @@
+import { examples } from '../../Data/SkillsData';
 import './Experience.css'
 import { useState } from 'react';
 
 interface ExperienceCardProps {
-    classname: string
+    classname: string,
+    title: string,
+    experience: string
 }
 
 export default function ExperienceCard(props: ExperienceCardProps) {
@@ -26,15 +29,11 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             <input className="InputClass"
                 type="range" min='3' max='100'
                 value={value} onChange={handleChange} id="customRange1"></input>
-            <p className='ExperienceFont'>
-                ASDHASUIDHSADUIHIUSAH
-                ASDHASUIDHSADUIHIUSAH
-                ASDHASUIDHSADUIHIUSAH
-                ASDHASUIDHSADUIHIUSAH
+            <div className='FontContainer'>
+                <span style={{ fontSize: '1.35cqw', fontWeight: '900' }}>{props.title}</span>
+                <p className='ExperienceFont'>{props.experience}</p>
+            </div>
 
-                ASDHASUIDHSADUIHIUSAH
-                ASDHASUIDHSADUIHIUSAH
-            </p>
 
-        </div>)
+        </div >)
 }

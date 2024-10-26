@@ -13,13 +13,14 @@ export default function ContactInfo() {
                 position: 'relative', top: 'calc(10%)px', marginTop: '5%'
             }}>
                 <li>
-                    Email
+                    <span style={{ textDecorationLine: 'underline' }}>Email</span>
                 </li>
                 <li>
                     {contactLinksData.CurtinEmail}
                 </li>
                 <li>
-                    {contactLinksData.Gmail}
+                    <p>{contactLinksData.Gmail}</p>
+
                 </li>
 
                 <li>

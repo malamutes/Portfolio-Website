@@ -55,10 +55,14 @@ export default function AboutMeIntroduction() {
         <div className="AboutMeIntroductionContainer">
             <div className="IntroductionContainer">
                 <h3 className={`${mount ? "IntroductionSlide" : ""}`}>{Introduction}</h3>
-                <div className={`PhotoContainer ${mount ? "PhotoContainerSlide" : ""}`}></div>
+                <div className={`PhotoContainer ${mount ? "PhotoContainerSlide" : ""}`}>
+                    <img style={{ maxWidth: '100%', height: 'auto' }}
+                        src='https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NTM5ODY4NjY1MzU4MTQy/alaskan-malamute-right-dog-for-you.jpg'
+                    />
+                </div>
                 <div style={{
-                    position: "absolute", top: "47.5%", left: "5%", backgroundColor: "green",
-                    width: "50%", height: "50%", display: "grid", placeItems: "center"
+                    position: "absolute", top: "47.5%", left: "5%", width: "50%",
+                    height: "50%", display: "grid", placeItems: "center"
                 }}>
                     {Object.keys(skillsData).map((skillset, index) =>
                     (<div key={skillset} className={`SkillsCardContainer ${mount ? "StartUpRotation" : ""}`} style={{

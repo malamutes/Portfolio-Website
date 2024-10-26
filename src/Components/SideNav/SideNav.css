@@ -5,28 +5,31 @@
     top: 0;
     width: 9%;
     height: 100vh;
-    background-color: blue;
-    left: -27%;
     z-index: 100;
     /* z index is to make sure drop down box is actualyl displayed */
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    transition-property: transform;
-    transition-duration: 1.75s;
 }
 
-.SideNavContainerSlide {
-    transform: translateX(300%);
-}
+@media (max-width: 2000px) {
+    .SideNavContainer {
+        left: -27%;
+        transition-property: transform;
+        transition-duration: 1.75s;
+    }
 
-/* if the screen is too large just set sidebar to be fixed */
+    .SideNavContainerSlide {
+        transform: translateX(300%);
+    }
+}
 
 @media (min-width: 2000px) {
     .SideNavContainer {
         width: 192px;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -36,6 +39,11 @@
         width: 105px;
         max-height: 40%;
         height: fit-content;
+        left: 0%;
+    }
+
+    .SideNavContainerSlide {
+        transform: translateX(0%);
     }
 
 }

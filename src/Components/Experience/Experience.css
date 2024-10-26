@@ -1,5 +1,4 @@
 .ExperienceContainer {
-    background-color: red;
     overflow: hidden;
 }
 
@@ -7,19 +6,15 @@
     position: absolute;
     display: flex;
     align-items: center;
-    background-color: chartreuse;
     height: calc((100% / 3) - 0.01px);
     opacity: 1;
     width: 100%;
     transition-property: transform opacity;
     transition-duration: 2s;
-    display: flex;
     justify-content: end;
 }
 
-
 .MiddleCard {
-    background-color: coral;
     top: calc((100% / 3) - 0.01px);
     left: 100%;
     z-index: 1;
@@ -32,13 +27,11 @@
 }
 
 .TopCard {
-    background-color: green;
     top: 0%;
     right: 100%;
 }
 
 .BottomCard {
-    background-color: yellow;
     top: calc((200% / 3) - 0.01px);
     right: 100%;
 
@@ -59,27 +52,32 @@
     transform: translateX(100%);
 }
 
-.ExperienceFont {
-    font-size: 125%;
-}
-
 .InputClass {
     position: absolute;
     transform-Origin: center;
     width: 7.5%;
     transform: rotate(270deg);
     margin: -2.5%;
-    background-color: orange;
+}
+
+.FontContainer {
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 @media (max-width: 2000px) {
     .ExperienceFont {
-        font-size: 1.5cqw;
+        font-size: 1.35cqw;
+        line-height: 1.5;
     }
 }
 
 @media (min-width: 2000px) {
     .InputClass {
         margin: -1.75%;
+    }
+
+    .ExperienceFont {
+        font-size: 25px;
     }
 }

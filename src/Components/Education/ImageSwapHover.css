@@ -2,7 +2,6 @@
     position: absolute;
     /* not defining width and height here lets className from other file takes precedence
     because this part is more specific than className from another file */
-    background-color: azure;
     display: flex;
     justify-content: center;
 }
