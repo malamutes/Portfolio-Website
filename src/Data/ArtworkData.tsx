@@ -1,10 +1,10 @@
 import { examples } from "./SkillsData";
 
 const ArtworkVideos: examples = {
-    Crownless: "blendervideo/crownless/crownless.mp4",
-    Eve: "blendervideo/eve/eve.mp4",
-    KJS: "blendervideo/KJS/kjs.mp4",
-    OC: "blendervideo/OC/oc.mp4"
+    Crownless: "/blendervideo/crownless/crownless.mp4",
+    Eve: "/blendervideo/eve/eve.mp4",
+    KJS: "/blendervideo/KJS/kjs.mp4",
+    OC: "/blendervideo/OC/oc.mp4"
 }
 
 const ArtworkVideosTitle: examples = {
@@ -15,10 +15,10 @@ const ArtworkVideosTitle: examples = {
 }
 
 const ArtworkVideosIcon: examples = {
-    Crownless: "blendervideo/crownless/crownlessIcon.png",
-    Eve: "blendervideo/eve/eveIcon.png",
-    KJS: "blendervideo/KJS/kjsIcon.png",
-    OC: "blendervideo/OC/ocIcon.png"
+    Crownless: "/blendervideo/crownless/crownlessIcon.png",
+    Eve: "/blendervideo/eve/eveIcon.png",
+    KJS: "/blendervideo/KJS/kjsIcon.png",
+    OC: "/blendervideo/OC/ocIcon.png"
 }
 
 const ArtworkVideosIconHue: examples = {
