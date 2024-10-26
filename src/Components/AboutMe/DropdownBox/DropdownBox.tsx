@@ -1,6 +1,5 @@
 import './DropdownBox.css'
-import React from 'react';
-import { examples, Skills } from '../../../Data/SkillsData';
+import { examples } from '../../../Data/SkillsData';
 
 interface DropdownBoxProps {
     example: examples

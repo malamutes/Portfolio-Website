@@ -1,11 +1,9 @@
 import React from 'react'
 import './AboutMeIntroduction.css'
-import DropdownBox from './DropdownBox/DropdownBox'
 import SkillsCard from './DropdownBox/SkillsCard'
 import { SkillsNew } from '../../Data/SkillsData'
 import { ContactLinks } from '../../Data/ContactLinks'
-import { useState, useEffect, useRef } from 'react'
-import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition'
+import { useState, useEffect } from 'react'
 
 const Introduction = `
 Hiya!

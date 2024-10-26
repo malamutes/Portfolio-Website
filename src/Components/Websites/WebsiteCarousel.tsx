@@ -3,10 +3,6 @@ import { useRef } from 'react';
 import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition';
 
 export default function WebsiteCarousel() {
-    const indicatorStyle: React.CSSProperties = {
-        backgroundColor: 'purple'
-    }
-
     const carouselRef = useRef<HTMLDivElement>(null);
     const scrollPast = checkScrollPosition((9 / 10), carouselRef)
 

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import './Education.css'
 import { useRef } from 'react';
 import { EducationImages } from '../../Data/EducationImages';

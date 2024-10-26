@@ -1,4 +1,3 @@
-import { examples } from '../../Data/SkillsData';
 import './Experience.css'
 import { useState } from 'react';
 

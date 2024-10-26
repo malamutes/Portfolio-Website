@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import AboutMe from './Components/AboutMe/AboutMe'
 import SideNav from './Components/SideNav/SideNav'
