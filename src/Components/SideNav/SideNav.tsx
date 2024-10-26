@@ -55,7 +55,7 @@ export default function SideNav() {
                 <ul className="MyUnorderedList">
                     {anchors.map((anchor, index) => (
                         <li key={index} className="AnchorLinksDiv">
-                            <a href={`#${anchor}ID`}>
+                            <a style={{ color: 'rgb(24, 196, 248)' }} href={`#${anchor}ID`}>
                                 {anchor}
                             </a>
                         </li>

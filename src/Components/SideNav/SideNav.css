@@ -5,12 +5,13 @@
     top: 0;
     width: 9%;
     height: 100vh;
-    z-index: 100;
+    z-index: 100000;
     /* z index is to make sure drop down box is actualyl displayed */
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    background-color: rgb(43, 14, 63);
 }
 
 @media (max-width: 2000px) {
@@ -50,12 +51,12 @@
 
 .ToggleViewBox {
     position: fixed;
-    width: 5%;
-    aspect-ratio: 1;
-    background-color: red;
+    width: 10cqw;
+    aspect-ratio: 5;
+    background-color: purple;
     top: 0;
     display: none;
-    z-index: 1000;
+    z-index: 100001;
 }
 
 @media (max-width: 768px) {
@@ -97,7 +98,7 @@
 }
 
 .AnchorLinksDiv a:hover {
-    transform: scale(1.5);
+    transform: scale(1.25);
     transition-duration: 1s;
     cursor: pointer;
 }

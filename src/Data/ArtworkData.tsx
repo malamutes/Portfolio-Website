@@ -28,6 +28,13 @@ const ArtworkVideosIconHue: examples = {
     OC: "hue-rotate(90deg)"
 }
 
+const ArtworkVideoColor: examples = {
+    Crownless: "blue",
+    Eve: "purple",
+    KJS: "red",
+    OC: "green"
+}
 
 
-export { ArtworkVideos, ArtworkVideosTitle, ArtworkVideosIcon, ArtworkVideosIconHue };
+
+export { ArtworkVideos, ArtworkVideosTitle, ArtworkVideosIcon, ArtworkVideosIconHue, ArtworkVideoColor };

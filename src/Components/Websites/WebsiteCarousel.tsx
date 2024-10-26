@@ -1,6 +1,7 @@
 import './Websites.css'
 import { useRef } from 'react';
 import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition';
+import ContainerTitle from '../CommonLogicStyles/ContainerTitle';
 
 export default function WebsiteCarousel() {
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -8,6 +9,7 @@ export default function WebsiteCarousel() {
 
     return (
         <div id="carouselExampleControls" className="carousel slide CarouselContainer" data-bs-ride="carousel" ref={carouselRef}>
+            <ContainerTitle active={scrollPast} title='WEBSITE' top='5%' left='-49cqw' color='purple' />
             <div className={`carousel-indicators CommonTransformations ${scrollPast ? "CarouselIndicatorSlide" : ""}`} id='CarouselIndicator'>
                 <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></a>
                 <a type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></a>
@@ -15,12 +17,11 @@ export default function WebsiteCarousel() {
             </div>
             <div className={`carousel-inner CommonTransformations ${scrollPast ? "CarouselInnerSlide" : ""}`}>
                 <div style={{ backgroundColor: 'red' }} className="carousel-item CarouselItem">
-
                 </div>
                 <div style={{ backgroundColor: 'blue' }} className="carousel-item CarouselItem">
 
                 </div>
-                <div style={{ backgroundColor: 'cyan' }} className="carousel-item active CarouselItem">
+                <div style={{ backgroundColor: 'green' }} className="carousel-item active CarouselItem">
 
                 </div>
             </div>

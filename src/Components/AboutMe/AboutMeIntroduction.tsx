@@ -4,6 +4,8 @@ import SkillsCard from './DropdownBox/SkillsCard'
 import { SkillsNew } from '../../Data/SkillsData'
 import { ContactLinks } from '../../Data/ContactLinks'
 import { useState, useEffect } from 'react'
+import '../CommonLogicStyles/CommonStyles.css'
+import ContainerTitle from '../CommonLogicStyles/ContainerTitle'
 
 const Introduction = `
 Hiya!
@@ -52,14 +54,18 @@ export default function AboutMeIntroduction() {
     return (
         <div className="AboutMeIntroductionContainer">
             <div className="IntroductionContainer">
-                <h3 className={`${mount ? "IntroductionSlide" : ""}`}>{Introduction}</h3>
+                <ContainerTitle active={mount} title='ABOUT ME' top='2.5%' left='-52.5cqw' color='red' />
+                <h3 className={`IntroductionContainerH3 ${mount ? "IntroductionSlide" : ""}`}>{Introduction}</h3>
                 <div className={`PhotoContainer ${mount ? "PhotoContainerSlide" : ""}`}>
-                    <img style={{ maxWidth: '100%', height: 'auto' }}
+                    <img style={{
+                        maxWidth: '100%', height: 'auto', borderRadius: '50%',
+                        border: "5px dashed purple"
+                    }}
                         src='https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NTM5ODY4NjY1MzU4MTQy/alaskan-malamute-right-dog-for-you.jpg'
                     />
                 </div>
                 <div style={{
-                    position: "absolute", top: "47.5%", left: "5%", width: "50%",
+                    position: "absolute", top: "48.5%", left: "5%", width: "50%",
                     height: "50%", display: "grid", placeItems: "center"
                 }}>
                     {Object.keys(skillsData).map((skillset, index) =>

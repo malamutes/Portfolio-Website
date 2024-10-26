@@ -6,7 +6,7 @@
 
 .CarouselContainer {
     position: absolute;
-    width: 80%;
+    width: 70%;
     height: 100%;
 }
 
@@ -22,6 +22,7 @@
     transition-duration: 2s;
     display: flex;
     place-items: center;
+    opacity: 1;
 }
 
 .carousel-indicators.CarouselIndicatorSlide {
@@ -31,17 +32,23 @@
 .carousel-inner.CommonTransformations {
     transition-property: transform;
     transition-duration: 2s;
-    top: -87.5%;
+    top: -65%;
+    cursor: pointer;
+    opacity: 1;
 }
 
 .carousel-inner.CarouselInnerSlide {
     transform: translateY(120%);
+
 }
 
 .carousel-control-prev.CommonTransformations {
     transition-property: transform;
     transition-duration: 2s;
     left: -27.5%;
+    top: 15%;
+
+
 }
 
 .carousel-control-prev.CarouselPrevSlide {
@@ -52,6 +59,7 @@
     transition-property: transform;
     transition-duration: 2s;
     right: -27.5%;
+    top: 15%
 }
 
 .carousel-control-next.CarouselNextSlide {
@@ -83,6 +91,22 @@
 
     .carousel-indicators.CommonTransformations {
         top: 50cqw;
+    }
+
+    .carousel-inner.CommonTransformations {
+        top: -70%
+    }
+
+    .carousel-control-prev.CommonTransformations {
+        top: 15%
+    }
+
+    .carousel-control-next.CommonTransformations {
+        top: 15%
+    }
+
+    .carousel-indicators.CommonTransformations {
+        top: 105%;
     }
 }
 

@@ -16,7 +16,14 @@
 
 .DisplayText {
     visibility: hidden;
-    font-size: 0.5rem;
+    font-size: 0.5cqw;
     transition-property: transform;
     transition-duration: 2s;
+}
+
+
+@media (min-width: 2000px) {
+    .DummyContainer:hover .DisplayText {
+        font-size: 5px;
+    }
 }

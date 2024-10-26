@@ -3,6 +3,7 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .IntroductionContainer {
@@ -22,26 +23,33 @@
     right: -50%;
     width: 20%;
     height: 100%;
-    transition-property: transform;
-    transition-duration: 2s;
+    background: radial-gradient(closest-side, rgba(128, 0, 128, 0.363), rgba(61, 9, 110, 0));
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 2s, 4s;
 }
 
 .BackgroundContainerSlide {
     transform: translateX(-250%);
+    opacity: 1;
 }
 
-.IntroductionContainer h3 {
+.IntroductionContainerH3 {
     position: relative;
     width: 55%;
     font-size: 1.5cqw;
     left: 5%;
-    top: -40%;
-    transition-property: transform;
-    transition-duration: 2s;
+    top: -35%;
+    opacity: 0;
+    font-weight: 350;
+    transition-property: transform, opacity;
+    transition-duration: 2s, 4s;
+    transition-timing-function: smooth, ease-in;
 }
 
 .IntroductionSlide {
     transform: translateY(225%);
+    opacity: 1;
 }
 
 .PhotoContainer {
@@ -75,6 +83,10 @@
 }
 
 @media (min-width: 2000px) {
+    .PhotoContainer {
+        top: 115%
+    }
+
     .IntroductionContainer h3 {
         font-size: 175%;
         width: 50%;
@@ -92,5 +104,9 @@
 @media (max-width: 768px) {
     .BackgroundContainer {
         display: none;
+    }
+
+    .IntroductionContainerH3 {
+        top: -22.5%;
     }
 }

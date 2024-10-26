@@ -33,8 +33,9 @@
 }
 
 .CommonTransformations {
-    transition-property: transform;
+    transition-property: transform, opacity;
     transition-duration: 2s;
+    opacity: 0;
 }
 
 #ArtworkVideo {
@@ -92,21 +93,25 @@
 
 .ImageContainerSlide {
     transform: translateX(-100%);
+    opacity: 1;
 }
 
 .NameContainerSlide {
     transform: translateY(100%);
+    opacity: 1;
 }
 
 .IconContainerSlide {
     transform: translateY(-100%);
+    opacity: 1;
 }
 
 .ArtworkTitle {
     position: relative;
     top: 50%;
     font-size: 300%;
-    font-weight: 900;
+    font-weight: 500;
+    font-style: italic;
     width: 50%;
     text-align: center;
     height: fit-content;

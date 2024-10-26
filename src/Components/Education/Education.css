@@ -1,6 +1,7 @@
 .EducationContainer {
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .SchoolCommonStyles {
@@ -52,9 +53,17 @@
     opacity: 0;
     font-size: 1.1cqw;
     max-width: 80%;
-    font-weight: 700;
+    font-weight: 200;
     text-align: center;
     word-break: normal;
+    display: grid;
+    place-items: center;
+}
+
+@media (max-width: 768px) {
+    .EducationDescription {
+        font-size: 1.25cqw;
+    }
 }
 
 

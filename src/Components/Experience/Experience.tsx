@@ -3,6 +3,7 @@ import ExperienceCard from './ExperienceCard';
 import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition';
 import { useRef } from 'react';
 import { ExperienceData } from '../../Data/ExperienceData';
+import ContainerTitle from '../CommonLogicStyles/ContainerTitle';
 
 export default function Experience() {
     const experienceCardRef = useRef<HTMLDivElement>(null);
@@ -11,6 +12,7 @@ export default function Experience() {
 
     return (<div id="ExperienceID" className="DefaultMainContainer ExperienceContainer"
         ref={experienceCardRef}>
+        <ContainerTitle active={scrollPast} title='EXPERIENCE' top='-2%' left='-52.5cqw' color='green' />
         <ExperienceCard classname={`TopCard ${scrollPast ? "TopCardSlide" : ""}`}
             title={Object.keys(experienceData)[0]} experience={experienceData[Object.keys(experienceData)[0]]} />
         <ExperienceCard classname={`MiddleCard ${scrollPast ? "MiddleCardSlide" : ""}`}

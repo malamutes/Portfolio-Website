@@ -4,8 +4,8 @@ export default function CurtinEducationDescription() {
     return (
         <div className="EducationDescription">
             <span>FEB 2023 - PRESENT</span> <br />
-            Bachelor of Advanced Science, Computing Major (Honours)
-            <ul style={{ padding: 0, margin: 0 }}>
+            <span style={{ fontWeight: 'bold' }}>Bachelor of Advanced Science, Computing Major (Honours)</span>
+            <ul style={{ padding: "2.5%", margin: 0, maxWidth: '80%' }}>
                 <li>
                     Achieved a course weighted average of 76 for Semester 1 of 2024
                 </li>
@@ -19,6 +19,7 @@ export default function CurtinEducationDescription() {
                 </li>
             </ul>
             Topics: Operating Systems, C, Unix, Kotlin, Java, Python, Data Mining, Data structures, Comp-Vision Research, Database
+            <a href='https://www.curtin.edu.au/' target='_blank'>CURTIN</a>
         </div>
     );
 }
@@ -27,8 +28,8 @@ export function AXHSEducationDescription() {
     return (
         <div className="EducationDescription">
             <span>FEB 2016 – DEC 2022</span> <br />
-            High School Diploma (WACE certificate)
-            <ul style={{ padding: 0, margin: 0 }}>
+            <span style={{ fontWeight: 'bold' }}>High School Diploma (WACE certificate)</span>
+            <ul style={{ padding: '2.5%', margin: 0, maxWidth: '80%' }}>
                 <li>
                     Achieved ATAR of 98+ doing Mathematics Specs, Methods, Physics, Chemistry and English
                 </li>
@@ -40,6 +41,7 @@ export function AXHSEducationDescription() {
                 <li>
                     Achieved Distinction multiple times for CAT competition.
                 </li>
+                <a href='https://applecross.wa.edu.au/' target='_blank'>APPLECROSS</a>
             </ul>
 
         </div>

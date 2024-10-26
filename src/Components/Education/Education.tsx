@@ -6,7 +6,7 @@ import { AXHSEducationDescription } from './EducationDescription';
 import ImageSwapHoverCurtin from './ImageSwapHover';
 import { ImageSwapHoverAXHS } from './ImageSwapHover';
 import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition';
-
+import ContainerTitle from '../CommonLogicStyles/ContainerTitle';
 
 export default function Education() {
     const curtinContainerRef = useRef<HTMLDivElement>(null);
@@ -21,6 +21,7 @@ export default function Education() {
 
     return (
         <div id="EducationID" className="DefaultMainContainer EducationContainer">
+            <ContainerTitle active={scrollPast} title='EDUCATION' top='5%' left='-52.5cqw' color='yellow' />
             <div className={`SchoolCommonStyles CurtinContainer ${scrollPast ? "Expanded" : ""}`} id="CurtinContainer" ref={curtinContainerRef}>
                 <ImageSwapHoverCurtin width="80%" aspectRatio="1" img1={educationImages[2]}
                     img2={educationImages[3]} className={ImageHoverStyle} />

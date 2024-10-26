@@ -22,14 +22,14 @@ export default function ExperienceCard(props: ExperienceCardProps) {
         <div className={`ExperienceCardContainer ${props.classname}`}>
             <div style={{
                 position: 'absolute', height: '100%', width: `${value}%`,
-                backgroundColor: 'black'
+                backgroundColor: 'rgba(31, 2, 37, 1)'
             }}>
             </div>
             <input className="InputClass"
                 type="range" min='3' max='100'
                 value={value} onChange={handleChange} id="customRange1"></input>
             <div className='FontContainer'>
-                <span style={{ fontSize: '1.35cqw', fontWeight: '900' }}>{props.title}</span>
+                <span className='ExperienceFont' style={{ fontWeight: '900' }}>{props.title}</span>
                 <p className='ExperienceFont'>{props.experience}</p>
             </div>
 

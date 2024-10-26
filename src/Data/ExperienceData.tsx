@@ -8,7 +8,7 @@ const ExperienceData: examples = {
         work `,
 
     Programming: `3+ years of experience with Python, Java and C. 6 Months of experience with Kotlin, React, Tsx and CSS. 
-        • Have designed websites emulating Riot Games' websites for practice (don't sue me, no profit is made!)
+        • Have designed websites emulating Riot Games' websites for practice (don't sue me, no profit is made!) I can't show it on portfolio unfortunately :(
         • Have designed several apps in Android Studio with Kotlin and Compose.`,
 
     Tutoring: `Private Tutor, Perth WA 

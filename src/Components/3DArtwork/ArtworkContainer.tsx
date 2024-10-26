@@ -1,8 +1,8 @@
 import './Artwork.css'
 import checkScrollPosition from '../CommonLogicStyles/CheckScrollPosition';
 import { useRef, useState, useEffect } from 'react';
-import { ArtworkVideos, ArtworkVideosTitle, ArtworkVideosIcon, ArtworkVideosIconHue } from '../../Data/ArtworkData';
-
+import { ArtworkVideos, ArtworkVideosTitle, ArtworkVideosIcon, ArtworkVideosIconHue, ArtworkVideoColor } from '../../Data/ArtworkData';
+import ContainerTitle from '../CommonLogicStyles/ContainerTitle';
 
 export default function ArtworkContainer() {
 
@@ -12,9 +12,11 @@ export default function ArtworkContainer() {
     const vidTitle = ArtworkVideosTitle;
     const icon = ArtworkVideosIcon;
     const hue = ArtworkVideosIconHue;
+    const col = ArtworkVideoColor
 
     const [title, setTitle] = useState(vidTitle["Crownless"]);
     const [video, setVideo] = useState(vid["Crownless"]);
+    const [color, setColor] = useState('transparent')
 
     const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -27,6 +29,7 @@ export default function ArtworkContainer() {
     function handleClick(text: string) {
         setTitle(vidTitle[text]);
         setVideo(vid[text])
+        setColor(col[text])
     }
 
     //need to do onMouseEnter and handleMouseEnter in more detail
@@ -36,8 +39,9 @@ export default function ArtworkContainer() {
 
     return (
         <div ref={artworkCardRef}>
+            <ContainerTitle active={scrollPast} title='ARTWORK' left='-45cqw' top='5%' color='blue' />
             <div className={`ImageContainer CommonTransformations ${scrollPast ? "ImageContainerSlide" : ""}`}>
-                <video ref={videoRef} autoPlay muted loop id="ArtworkVideo">
+                <video style={{ border: `0.25cqw double ${color}` }} ref={videoRef} autoPlay muted loop id="ArtworkVideo">
                     <source src={video} type="video/mp4"></source>
                 </video>
             </div>

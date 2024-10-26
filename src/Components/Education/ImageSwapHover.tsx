@@ -14,8 +14,8 @@ so pass as parameters instead */
 
 export default function ImageSwapHoverCurtin(props: ImageSwapHoverProps) {
     return (<div style={{ width: props.width, aspectRatio: props.aspectRatio }} className={`ImageSwapHoverContainer ${props.className}`}>
-        <img style={{ top: "20%" }} className="ImageOne" src={props.img1}></img>
-        <img className="ImageTwo" src={props.img2}></img>
+        <img style={{ top: "15%" }} className="ImageOne" src={props.img1}></img>
+        <img className="ImageTwo" style={{ borderRadius: '50%' }} src={props.img2}></img>
     </div>)
 }
 
@@ -23,7 +23,7 @@ export default function ImageSwapHoverCurtin(props: ImageSwapHoverProps) {
 export function ImageSwapHoverAXHS(props: ImageSwapHoverProps) {
     return (<div style={{ width: props.width, aspectRatio: props.aspectRatio }} className={`ImageSwapHoverContainer ${props.className}`}>
         <img className="ImageOne" src={props.img1}></img>
-        <img className="ImageTwo" src={props.img2}></img>
+        <img className="ImageTwo" style={{ borderRadius: '50%' }} src={props.img2}></img>
     </div>)
 }
 
