@@ -7,7 +7,6 @@ body,
   align-items: center;
   overflow-x: hidden;
 
-  color: #edfce7c5;
   /* overflow x is to prevent horizontal scrolling shouldnt even be a thing idk */
 }
 
@@ -34,4 +33,39 @@ body,
 
 html {
   scroll-behavior: smooth;
+}
+
+.ContrastButton {
+  top: 2.5cqw;
+  left: 85cqw;
+  position: absolute;
+  cursor: pointer;
+  width: 3.75cqw;
+  height: auto;
+  z-index: 1000000;
+  filter: invert(1);
+}
+
+.ContrastButton:hover {
+  transition-property: transform;
+  transition-duration: 1s;
+  transform: scale(1.25);
+}
+
+.ContrastButtonLight {
+  filter: invert(0);
+}
+
+@media (min-width: 2000px) {
+  .ContrastButton {
+    width: 100px;
+    top: 50px;
+    left: 1600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ContrastButton {
+    width: 7.5cqw;
+  }
 }

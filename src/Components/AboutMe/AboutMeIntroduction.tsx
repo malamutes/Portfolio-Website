@@ -52,55 +52,58 @@ export default function AboutMeIntroduction() {
     }, []);
 
     return (
-        <div className="AboutMeIntroductionContainer">
-            <div className="IntroductionContainer">
-                <ContainerTitle active={mount} title='ABOUT ME' top='2.5%' left='-52.5cqw' color='red' />
-                <h3 className={`IntroductionContainerH3 ${mount ? "IntroductionSlide" : ""}`}>{Introduction}</h3>
-                <div className={`PhotoContainer ${mount ? "PhotoContainerSlide" : ""}`}>
-                    <img style={{
-                        maxWidth: '100%', height: 'auto', borderRadius: '50%',
-                        border: "5px dashed purple"
-                    }}
-                        src='https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NTM5ODY4NjY1MzU4MTQy/alaskan-malamute-right-dog-for-you.jpg'
-                    />
-                </div>
-                <div style={{
-                    position: "absolute", top: "48.5%", left: "5%", width: "50%",
-                    height: "50%", display: "grid", placeItems: "center"
-                }}>
-                    {Object.keys(skillsData).map((skillset, index) =>
-                    (<div key={skillset} className={`SkillsCardContainer ${mount ? "StartUpRotation" : ""}`} style={{
-                        '--rotation': `${index * 360 / 15}deg`, '--translation': `${Math.log(index * 2.5) * distance}${metric}`
-                    } as React.CSSProperties}>
-                        <SkillsCard iconUrl={skillsData[skillset]} name={skillset} />
+        <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
+            <ContainerTitle active={mount} title='ABOUT ME' top='2.5%' left='-47cqw' color='red' />
+            <div className="AboutMeIntroductionContainer">
+                <div className="IntroductionContainer">
+                    <h3 className={`IntroductionContainerH3 ${mount ? "IntroductionSlide" : ""}`}>{Introduction}</h3>
+                    <div className={`PhotoContainer ${mount ? "PhotoContainerSlide" : ""}`}>
+                        <img style={{
+                            maxWidth: '100%', height: 'auto', borderRadius: '50%',
+                            border: "5px dashed purple"
+                        }}
+                            src='https://images.saymedia-content.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MTk2NTM5ODY4NjY1MzU4MTQy/alaskan-malamute-right-dog-for-you.jpg'
+                        />
                     </div>
-                    ))}
+                    <div style={{
+                        position: "absolute", top: "48.5%", left: "5%", width: "50%",
+                        height: "50%", display: "grid", placeItems: "center"
+                    }}>
+                        {Object.keys(skillsData).map((skillset, index) =>
+                        (<div key={skillset} className={`SkillsCardContainer ${mount ? "StartUpRotation" : ""}`} style={{
+                            '--rotation': `${index * 360 / 15}deg`, '--translation': `${Math.log(index * 2.5) * distance}${metric}`
+                        } as React.CSSProperties}>
+                            <SkillsCard iconUrl={skillsData[skillset]} name={skillset} />
+                        </div>
+                        ))}
+                    </div>
+
                 </div>
 
-            </div>
+                <div className={`BackgroundContainer ${mount ? "BackgroundContainerSlide" : ""}`}>
+                    <span className='BackgroundFont'>Address
+                        <p>Marmion Street, Booragoon, 6154, WA, Australia</p>
+                        Phone Number <br />
+                        <p>(+61) 452 389 408</p>
+                    </span>
 
-            <div className={`BackgroundContainer ${mount ? "BackgroundContainerSlide" : ""}`}>
-                <span className='BackgroundFont'>Address
-                    <p>Marmion Street, Booragoon, 6154, WA, Australia</p>
-                    Phone Number <br />
-                    <p>(+61) 452 389 408</p>
-                </span>
+                    Email
+                    <ul style={{ listStyleType: 'none', padding: '0' }} className='BackgroundFont'>
+                        <li>
+                            {contactLinksData.CurtinEmail}
+                        </li>
+                        <li>
+                            {contactLinksData.Gmail}
+                        </li>
+                    </ul>
+                    <a href={contactLinksData.Artstation} target="_blank"><span className="BackgroundFont">Artstation</span></a> <br />
+                    <a href={contactLinksData.Github} target="_blank"><span className="BackgroundFont">Github</span></a> <br />
+                    <a href={contactLinksData.Linkedln} target="_blank"><span className="BackgroundFont">LinkedIn</span></a> <br />
+                    <a href="public\PaulVan_CV.pdf" target="_blank"><span className="BackgroundFont">Resume</span></a>
 
-                Email
-                <ul style={{ listStyleType: 'none', padding: '0' }} className='BackgroundFont'>
-                    <li>
-                        {contactLinksData.CurtinEmail}
-                    </li>
-                    <li>
-                        {contactLinksData.Gmail}
-                    </li>
-                </ul>
-                <a href={contactLinksData.Artstation} target="_blank"><span className="BackgroundFont">Artstation</span></a> <br />
-                <a href={contactLinksData.Github} target="_blank"><span className="BackgroundFont">Github</span></a> <br />
-                <a href={contactLinksData.Linkedln} target="_blank"><span className="BackgroundFont">LinkedIn</span></a> <br />
-                <a href="public\PaulVan_CV.pdf" target="_blank"><span className="BackgroundFont">Resume</span></a>
-
+                </div>
             </div>
         </div>
+
     )
 }

@@ -16,7 +16,7 @@ export default function ArtworkContainer() {
 
     const [title, setTitle] = useState(vidTitle["Crownless"]);
     const [video, setVideo] = useState(vid["Crownless"]);
-    const [color, setColor] = useState('transparent')
+    const [color, setColor] = useState('blue')
 
     const videoRef = useRef<HTMLVideoElement>(null);
 

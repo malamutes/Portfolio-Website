@@ -23,6 +23,7 @@
     right: -50%;
     width: 20%;
     height: 100%;
+    top: 2.5cqw;
     background: radial-gradient(closest-side, rgba(128, 0, 128, 0.363), rgba(61, 9, 110, 0));
     opacity: 0;
     transition-property: transform, opacity;

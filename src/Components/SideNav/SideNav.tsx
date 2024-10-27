@@ -1,8 +1,12 @@
 import './SideNav.css'
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useState } from 'react';
+import { darkContext } from '../CommonLogicStyles/DarkContext';
+
 
 export default function SideNav() {
+    const theme = useContext(darkContext);
+
     const anchors = ["AboutMe", "Education", "Experience", "Artwork",
         "Websites"];
 
@@ -51,11 +55,11 @@ export default function SideNav() {
         <>
             <button className="ToggleViewBox " data-bs-toggle="collapse"
                 data-bs-target="#SideNavContainer" aria-expanded="true" aria-controls="SideNavContainer"></button>
-            <div className={`SideNavContainer collapse ${isShow ? "show" : ""} ${mount ? 'SideNavContainerSlide' : ''}`} id="SideNavContainer">
+            <div className={`SideNavContainer collapse ${isShow ? "show" : ""} ${theme ? "" : "SideNavContainerLight"} ${mount ? 'SideNavContainerSlide' : ''}`} id="SideNavContainer">
                 <ul className="MyUnorderedList">
                     {anchors.map((anchor, index) => (
                         <li key={index} className="AnchorLinksDiv">
-                            <a style={{ color: 'rgb(24, 196, 248)' }} href={`#${anchor}ID`}>
+                            <a style={{ color: `${theme ? "rgb(24, 196, 248)" : "rgb(66, 27, 73)"}` }} href={`#${anchor}ID`}>
                                 {anchor}
                             </a>
                         </li>

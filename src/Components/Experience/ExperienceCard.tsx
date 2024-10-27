@@ -1,5 +1,6 @@
 import './Experience.css'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { darkContext } from '../CommonLogicStyles/DarkContext';
 
 interface ExperienceCardProps {
     classname: string,
@@ -10,6 +11,8 @@ interface ExperienceCardProps {
 export default function ExperienceCard(props: ExperienceCardProps) {
     const [value, setValue] = useState<number>(100);
 
+    const theme = useContext(darkContext);
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValue(Number(event.target.value));
         //number casting here because react input fields/browsers treat retrieves
@@ -17,12 +20,11 @@ export default function ExperienceCard(props: ExperienceCardProps) {
         //and same as passing in event as parameter need to specify type in tsx
     }
 
-
     return (
         <div className={`ExperienceCardContainer ${props.classname}`}>
             <div style={{
                 position: 'absolute', height: '100%', width: `${value}%`,
-                backgroundColor: 'rgba(31, 2, 37, 1)'
+                backgroundColor: `${theme ? 'rgba(31, 2, 37, 1)' : 'rgba(92, 55, 92, 1)'}`
             }}>
             </div>
             <input className="InputClass"

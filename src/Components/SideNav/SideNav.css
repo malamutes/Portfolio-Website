@@ -14,6 +14,10 @@
     background-color: rgb(43, 14, 63);
 }
 
+.SideNavContainerLight {
+    background-color: rgb(124, 92, 145);
+}
+
 @media (max-width: 2000px) {
     .SideNavContainer {
         left: -27%;

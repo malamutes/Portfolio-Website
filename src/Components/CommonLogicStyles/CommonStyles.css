@@ -37,7 +37,6 @@
     top: 75%;
     transform-origin: left;
     opacity: 0.25;
-
     border-radius: 7.5%;
     border: none;
 }
@@ -45,7 +44,7 @@
 .line:hover {
     transition-property: transform opacity;
     transition-duration: 2s;
-    transform: scaleX(2.25);
+    transform: scaleX(2.2);
     opacity: 1;
 }
 
@@ -63,14 +62,14 @@
 
 @media (max-width: 400px) {
     .line {
-        top: 1.25cqw;
+        top: -10%;
     }
 }
 
 @media (min-width: 2000px) {
     .ContainerTitle {
         font-size: 65px;
-        left: -55% !important
+        left: -1000px !important
     }
 
     .line {

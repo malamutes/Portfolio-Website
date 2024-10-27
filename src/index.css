@@ -19,4 +19,12 @@ body {
   background-image: linear-gradient(to bottom, rgb(53, 1, 53), rgb(35, 1, 66));
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: rgb(239, 217, 248);
+}
+
+body.light-mode {
+  background-image: linear-gradient(to bottom, rgb(248, 211, 248), rgb(132, 113, 150));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(28, 33, 34);
 }
